@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC6456CC204D6BED00280750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456CB204D6BED00280750 /* AppDelegate.swift */; };
+		AC6456D1204D6BED00280750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456CF204D6BED00280750 /* Main.storyboard */; };
+		AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D2204D6BED00280750 /* Assets.xcassets */; };
+		AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */; };
+		AC6456E1204D6BED00280750 /* FindLyricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456E0204D6BED00280750 /* FindLyricsTests.swift */; };
+		AC6456EC204D6BED00280750 /* FindLyricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */; };
+		AC6C7460204E981300091A74 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C745F204E981300091A74 /* TableViewController.swift */; };
+		AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */; };
+		AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */; };
+		AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E7204FF79D0017AAB8 /* ViewController.swift */; };
+		AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC6456DD204D6BED00280750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6456C0204D6BED00280750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6456C7204D6BED00280750;
+			remoteInfo = FindLyrics;
+		};
+		AC6456E8204D6BED00280750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6456C0204D6BED00280750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6456C7204D6BED00280750;
+			remoteInfo = FindLyrics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC6456C8204D6BED00280750 /* FindLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6456CB204D6BED00280750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC6456D0204D6BED00280750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC6456D2204D6BED00280750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC6456D5204D6BED00280750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC6456D7204D6BED00280750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6456DC204D6BED00280750 /* FindLyricsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindLyricsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6456E0204D6BED00280750 /* FindLyricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLyricsTests.swift; sourceTree = "<group>"; };
+		AC6456E2204D6BED00280750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6456E7204D6BED00280750 /* FindLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLyricsUITests.swift; sourceTree = "<group>"; };
+		AC6456ED204D6BED00280750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6C745F204E981300091A74 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
+		AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
+		AC9D31E7204FF79D0017AAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC6456C5204D6BED00280750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6456D9204D6BED00280750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6456E4204D6BED00280750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC6456BF204D6BED00280750 = {
+			isa = PBXGroup;
+			children = (
+				AC6456CA204D6BED00280750 /* FindLyrics */,
+				AC6456DF204D6BED00280750 /* FindLyricsTests */,
+				AC6456EA204D6BED00280750 /* FindLyricsUITests */,
+				AC6456C9204D6BED00280750 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC6456C9204D6BED00280750 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC6456C8204D6BED00280750 /* FindLyrics.app */,
+				AC6456DC204D6BED00280750 /* FindLyricsTests.xctest */,
+				AC6456E7204D6BED00280750 /* FindLyricsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC6456CA204D6BED00280750 /* FindLyrics */ = {
+			isa = PBXGroup;
+			children = (
+				AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */,
+				AC6456CB204D6BED00280750 /* AppDelegate.swift */,
+				AC6C745F204E981300091A74 /* TableViewController.swift */,
+				AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */,
+				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
+				AC9D31E7204FF79D0017AAB8 /* ViewController.swift */,
+				AC6456CF204D6BED00280750 /* Main.storyboard */,
+				AC6456D2204D6BED00280750 /* Assets.xcassets */,
+				AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */,
+				AC6456D7204D6BED00280750 /* Info.plist */,
+			);
+			path = FindLyrics;
+			sourceTree = "<group>";
+		};
+		AC6456DF204D6BED00280750 /* FindLyricsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC6456E0204D6BED00280750 /* FindLyricsTests.swift */,
+				AC6456E2204D6BED00280750 /* Info.plist */,
+			);
+			path = FindLyricsTests;
+			sourceTree = "<group>";
+		};
+		AC6456EA204D6BED00280750 /* FindLyricsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */,
+				AC6456ED204D6BED00280750 /* Info.plist */,
+			);
+			path = FindLyricsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC6456C7204D6BED00280750 /* FindLyrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6456F0204D6BED00280750 /* Build configuration list for PBXNativeTarget "FindLyrics" */;
+			buildPhases = (
+				AC6456C4204D6BED00280750 /* Sources */,
+				AC6456C5204D6BED00280750 /* Frameworks */,
+				AC6456C6204D6BED00280750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindLyrics;
+			productName = FindLyrics;
+			productReference = AC6456C8204D6BED00280750 /* FindLyrics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC6456DB204D6BED00280750 /* FindLyricsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6456F3204D6BED00280750 /* Build configuration list for PBXNativeTarget "FindLyricsTests" */;
+			buildPhases = (
+				AC6456D8204D6BED00280750 /* Sources */,
+				AC6456D9204D6BED00280750 /* Frameworks */,
+				AC6456DA204D6BED00280750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6456DE204D6BED00280750 /* PBXTargetDependency */,
+			);
+			name = FindLyricsTests;
+			productName = FindLyricsTests;
+			productReference = AC6456DC204D6BED00280750 /* FindLyricsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC6456E6204D6BED00280750 /* FindLyricsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6456F6204D6BED00280750 /* Build configuration list for PBXNativeTarget "FindLyricsUITests" */;
+			buildPhases = (
+				AC6456E3204D6BED00280750 /* Sources */,
+				AC6456E4204D6BED00280750 /* Frameworks */,
+				AC6456E5204D6BED00280750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6456E9204D6BED00280750 /* PBXTargetDependency */,
+			);
+			name = FindLyricsUITests;
+			productName = FindLyricsUITests;
+			productReference = AC6456E7204D6BED00280750 /* FindLyricsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC6456C0204D6BED00280750 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alexandre Normand";
+				TargetAttributes = {
+					AC6456C7204D6BED00280750 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AC6456DB204D6BED00280750 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC6456C7204D6BED00280750;
+					};
+					AC6456E6204D6BED00280750 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC6456C7204D6BED00280750;
+					};
+				};
+			};
+			buildConfigurationList = AC6456C3204D6BED00280750 /* Build configuration list for PBXProject "FindLyrics" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC6456BF204D6BED00280750;
+			productRefGroup = AC6456C9204D6BED00280750 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC6456C7204D6BED00280750 /* FindLyrics */,
+				AC6456DB204D6BED00280750 /* FindLyricsTests */,
+				AC6456E6204D6BED00280750 /* FindLyricsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC6456C6204D6BED00280750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */,
+				AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */,
+				AC6456D1204D6BED00280750 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6456DA204D6BED00280750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6456E5204D6BED00280750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC6456C4204D6BED00280750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */,
+				AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */,
+				AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */,
+				AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */,
+				AC6C7460204E981300091A74 /* TableViewController.swift in Sources */,
+				AC6456CC204D6BED00280750 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6456D8204D6BED00280750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6456E1204D6BED00280750 /* FindLyricsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6456E3204D6BED00280750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6456EC204D6BED00280750 /* FindLyricsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC6456DE204D6BED00280750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC6456C7204D6BED00280750 /* FindLyrics */;
+			targetProxy = AC6456DD204D6BED00280750 /* PBXContainerItemProxy */;
+		};
+		AC6456E9204D6BED00280750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC6456C7204D6BED00280750 /* FindLyrics */;
+			targetProxy = AC6456E8204D6BED00280750 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC6456CF204D6BED00280750 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6456D0204D6BED00280750 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6456D5204D6BED00280750 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC6456EE204D6BED00280750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC6456EF204D6BED00280750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC6456F1204D6BED00280750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TLP4G7JFAH;
+				INFOPLIST_FILE = FindLyrics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.FindLyrics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC6456F2204D6BED00280750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TLP4G7JFAH;
+				INFOPLIST_FILE = FindLyrics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.FindLyrics;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC6456F4204D6BED00280750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TLP4G7JFAH;
+				INFOPLIST_FILE = FindLyricsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.FindLyricsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindLyrics.app/FindLyrics";
+			};
+			name = Debug;
+		};
+		AC6456F5204D6BED00280750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TLP4G7JFAH;
+				INFOPLIST_FILE = FindLyricsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.FindLyricsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindLyrics.app/FindLyrics";
+			};
+			name = Release;
+		};
+		AC6456F7204D6BED00280750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TLP4G7JFAH;
+				INFOPLIST_FILE = FindLyricsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.FindLyricsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindLyrics;
+			};
+			name = Debug;
+		};
+		AC6456F8204D6BED00280750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TLP4G7JFAH;
+				INFOPLIST_FILE = FindLyricsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alexandre.FindLyricsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindLyrics;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC6456C3204D6BED00280750 /* Build configuration list for PBXProject "FindLyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6456EE204D6BED00280750 /* Debug */,
+				AC6456EF204D6BED00280750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6456F0204D6BED00280750 /* Build configuration list for PBXNativeTarget "FindLyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6456F1204D6BED00280750 /* Debug */,
+				AC6456F2204D6BED00280750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6456F3204D6BED00280750 /* Build configuration list for PBXNativeTarget "FindLyricsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6456F4204D6BED00280750 /* Debug */,
+				AC6456F5204D6BED00280750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6456F6204D6BED00280750 /* Build configuration list for PBXNativeTarget "FindLyricsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6456F7204D6BED00280750 /* Debug */,
+				AC6456F8204D6BED00280750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC6456C0204D6BED00280750 /* Project object */;
+}
