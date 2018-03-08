@@ -4,7 +4,7 @@ import UIKit
 
 class TableViewController: UITableViewController , DBDelegate{
     
-    let dbController = DataBaseController()
+    let dbController = DataBaseController2()
     func dataLoaded(datas: Track_list?) {
         guard let datas = datas else {
             print ("error data")
@@ -20,11 +20,11 @@ class TableViewController: UITableViewController , DBDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 100
         
-        
-        
+        title = "Hello2"
         dbController.delegate = self
-        if dbController.load() == false {
+        if dbController.loadTracks() == false {
             print ("Error dbController.load")
         }
         
@@ -54,9 +54,10 @@ class TableViewController: UITableViewController , DBDelegate{
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellule", for: indexPath)
-        cell.textLabel?.text = dbController.datas.track[ indexPath.row ].name
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellule", for: indexPath) as! customTableViewCell
+        cell.title.text = dbController.datas.track[ indexPath.row ].name
+        cell.artist.text = dbController.datas.track[ indexPath.row ].artist
+        cell.album.text = dbController.datas.track[ indexPath.row ].album
         // Configure the cell...
         
         return cell
@@ -98,15 +99,18 @@ class TableViewController: UITableViewController , DBDelegate{
      }
      */
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+     {
+        
+        
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
+    
     
 }
 

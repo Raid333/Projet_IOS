@@ -19,4 +19,15 @@ class Track {
 
 class Track_list {
     var track = [Track]()
+    var lyric = [Lyric]()
 }
+
+class Lyric {
+    var id = 0
+    var body = ""
+}
+
+//class Lyric_list {
+//    var lyric = [Lyric]()
+//}
+

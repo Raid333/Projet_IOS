@@ -18,6 +18,7 @@
 		AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */; };
 		AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E7204FF79D0017AAB8 /* ViewController.swift */; };
 		AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */; };
+		ACE261AD205162CD006FC9C8 /* LyricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
 		AC9D31E7204FF79D0017AAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+		ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				AC6C745F204E981300091A74 /* TableViewController.swift */,
 				AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */,
 				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
+				ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */,
 				AC9D31E7204FF79D0017AAB8 /* ViewController.swift */,
 				AC6456CF204D6BED00280750 /* Main.storyboard */,
 				AC6456D2204D6BED00280750 /* Assets.xcassets */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE261AD205162CD006FC9C8 /* LyricsTableViewController.swift in Sources */,
 				AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */,
 				AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */,
 				AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */,

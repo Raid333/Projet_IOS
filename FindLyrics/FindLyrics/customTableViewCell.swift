@@ -10,6 +10,9 @@ import UIKit
 
 class customTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    @IBOutlet weak var album: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
