@@ -1,19 +1,17 @@
 //
-//  customTableViewCell.swift
+//  LyricsCustomCellule.swift
 //  FindLyrics
 //
-//  Created by Alexandre Normand on 07/03/2018.
+//  Created by Alexandre Normand on 09/03/2018.
 //  Copyright © 2018 Alexandre Normand. All rights reserved.
 //
 
 import UIKit
 
-class customTableViewCell: UITableViewCell {
+class LyricsCustomCellule: UITableViewCell {
 
+    @IBOutlet weak var Lyrics_body: UILabel!
     
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var artist: UILabel!
-    @IBOutlet weak var album: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

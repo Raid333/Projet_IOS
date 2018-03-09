@@ -13,11 +13,17 @@ protocol DBDelegate {
 }
 
 
-class DataBaseController2: NSObject
+class DataBaseController: NSObject
 {
     var delegate : DBDelegate? = nil
     
     var datas = Track_list()
+    
+    static let shared = DataBaseController()
+    
+    private override init() {
+
+    }
     
     private func musicMatchRequest( url : String , callback : @escaping ( [String : Any]? )-> Swift.Void) -> Bool
     {
@@ -78,7 +84,7 @@ class DataBaseController2: NSObject
         
         
         let apiKey = "3268eb1f943b699a9085beaede770116"
-        var parole = "test"
+        var parole = "bitch"
         var url = "http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=\(parole)&page_size=20&page=1&s_track_rating=desc&apikey=\(apiKey)"
         
         if( musicMatchRequest(url : url , callback: { (body) in
@@ -93,15 +99,15 @@ class DataBaseController2: NSObject
                     if let musique = track["track"] as? [ String : Any ] {
                         if let musiqueID = musique["track_id"] as? Int {
                             listeMusique.id = musiqueID
-                            //                                                print ("ID : \(musiqueID)")
+                            //  print ("ID : \(musiqueID)")
                         }
                         if let titre = musique["track_name"] as? String {
                             listeMusique.name = titre
-                            //                                                print ("TITRE : \(titre)")
+                            // print ("TITRE : \(titre)")
                         }
                         if let artiste = musique["artist_name"] as? String {
                             listeMusique.artist = artiste
-                            //                                                print ("ARTISTE : \(artiste)")
+                            // print ("ARTISTE : \(artiste)")
                         }
                         if let album = musique["album_name"] as? String {
                             listeMusique.album = album
@@ -109,7 +115,7 @@ class DataBaseController2: NSObject
                         
                     }// end for musique
                     
-                    // voir pour l'ajout de musqiue dans le tableau (bdd)
+                    // voir pour l'ajout de musique dans le tableau (bdd)
                     self.datas.track.append(listeMusique)
                 }
                 
@@ -196,14 +202,14 @@ class DataBaseController2: NSObject
         return false
     }
     
-    public func loadLyrics() ->Bool
+    public func loadLyrics(trackID : Int) ->Bool
     {
         // Récupération paroles en fonction de la "track_id"
         
         let apiKey = "3268eb1f943b699a9085beaede770116"
-        var track_id = "15953433"
-        var url = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=\(track_id)&apikey=\(apiKey)"
-        
+//        var trackID = ""
+        var url = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=\(trackID)&apikey=\(apiKey)"
+        print (url)
         if (musicMatchRequest( url : url , callback: { (body) in
             guard let body = body else {
                 return
@@ -213,11 +219,15 @@ class DataBaseController2: NSObject
                 
                 if let lyrics_body = lyrics["lyrics_body"] as? String {
                     // ajouter aux paroles
-                    print ("LYRIC : ")
                     listeLyric.body = lyrics_body
 //                    print (lyrics_body)
-                    self.datas.lyric.append(listeLyric)
+//                    print (listeLyric.body)
                 }
+                self.datas.lyric.append(listeLyric)
+            }//end body
+            
+            DispatchQueue.main.async {
+                self.delegate!.dataLoaded(datas : self.datas)
             }
 //            self.datas.lyric.append(listeLyric)
             //append sur la table lyrics

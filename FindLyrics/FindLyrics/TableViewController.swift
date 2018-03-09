@@ -1,17 +1,24 @@
-
+//
+//  TableViewController.swift
+//  FindLyrics
+//
+//  Created by Alexandre Normand on 08/03/2018.
+//  Copyright © 2018 Alexandre Normand. All rights reserved.
+//
 
 import UIKit
 
 class TableViewController: UITableViewController , DBDelegate{
     
-    let dbController = DataBaseController2()
+    let dbController = DataBaseController.shared
+    
     func dataLoaded(datas: Track_list?) {
         guard let datas = datas else {
             print ("error data")
             return
         }
         tableView.reloadData()
-        print ("datas ok")
+        print ("tracks ok")
     }
     
     
@@ -25,7 +32,7 @@ class TableViewController: UITableViewController , DBDelegate{
         title = "Hello2"
         dbController.delegate = self
         if dbController.loadTracks() == false {
-            print ("Error dbController.load")
+          //  print ("Error dbController.load")
         }
         
         // Uncomment the following line to preserve selection between presentations
@@ -105,8 +112,15 @@ class TableViewController: UITableViewController , DBDelegate{
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?)
      {
-        
-        
+        if segue.identifier == "trackID" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                let viewController = segue.destination as! LyricsTableViewController
+                viewController.indexTrack =  indexPath.row
+            }
+            
+        }
+
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }

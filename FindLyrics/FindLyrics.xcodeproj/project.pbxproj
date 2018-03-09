@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AC6456CC204D6BED00280750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456CB204D6BED00280750 /* AppDelegate.swift */; };
-		AC6456D1204D6BED00280750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456CF204D6BED00280750 /* Main.storyboard */; };
 		AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D2204D6BED00280750 /* Assets.xcassets */; };
 		AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */; };
 		AC6456E1204D6BED00280750 /* FindLyricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456E0204D6BED00280750 /* FindLyricsTests.swift */; };
@@ -16,9 +15,11 @@
 		AC6C7460204E981300091A74 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C745F204E981300091A74 /* TableViewController.swift */; };
 		AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */; };
 		AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */; };
+		AC934EAD20528BE500111DEC /* LyricsCustomCellule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */; };
 		AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E7204FF79D0017AAB8 /* ViewController.swift */; };
 		AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */; };
 		ACE261AD205162CD006FC9C8 /* LyricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */; };
+		ACE261B0205180F9006FC9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE261AE205180F9006FC9C8 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 /* Begin PBXFileReference section */
 		AC6456C8204D6BED00280750 /* FindLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6456CB204D6BED00280750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC6456D0204D6BED00280750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC6456D2204D6BED00280750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC6456D5204D6BED00280750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC6456D7204D6BED00280750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,9 +54,11 @@
 		AC6C745F204E981300091A74 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
 		AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
+		AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsCustomCellule.swift; sourceTree = "<group>"; };
 		AC9D31E7204FF79D0017AAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
 		ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsTableViewController.swift; sourceTree = "<group>"; };
+		ACE261AF205180F9006FC9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindLyrics/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +112,12 @@
 				AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */,
 				AC6456CB204D6BED00280750 /* AppDelegate.swift */,
 				AC6C745F204E981300091A74 /* TableViewController.swift */,
-				AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */,
-				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
 				ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */,
+				AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */,
+				ACE261AE205180F9006FC9C8 /* Main.storyboard */,
+				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
+				AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */,
 				AC9D31E7204FF79D0017AAB8 /* ViewController.swift */,
-				AC6456CF204D6BED00280750 /* Main.storyboard */,
 				AC6456D2204D6BED00280750 /* Assets.xcassets */,
 				AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */,
 				AC6456D7204D6BED00280750 /* Info.plist */,
@@ -247,9 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE261B0205180F9006FC9C8 /* Main.storyboard in Resources */,
 				AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */,
 				AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */,
-				AC6456D1204D6BED00280750 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +280,7 @@
 				ACE261AD205162CD006FC9C8 /* LyricsTableViewController.swift in Sources */,
 				AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */,
 				AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */,
+				AC934EAD20528BE500111DEC /* LyricsCustomCellule.swift in Sources */,
 				AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */,
 				AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */,
 				AC6C7460204E981300091A74 /* TableViewController.swift in Sources */,
@@ -316,20 +320,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC6456CF204D6BED00280750 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC6456D0204D6BED00280750 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC6456D5204D6BED00280750 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ACE261AE205180F9006FC9C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACE261AF205180F9006FC9C8 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -9,15 +9,17 @@
 import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
-
-    let dbController = DataBaseController2()
+    
+    var indexTrack = -1
+    let dbController = DataBaseController.shared
+    
     func dataLoaded(datas: Track_list?) {
         guard let datas = datas else {
             print ("error data")
             return
         }
         tableView.reloadData()
-        print ("datas ok")
+        print ("lyrics ok")
     }
     
     
@@ -26,14 +28,22 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
+        tableView.rowHeight = 1000
         
-        title = "Hello2"
+        print (indexTrack)
+        assert(indexTrack >= 0)
+        
+        
+        let track = dbController.datas.track[indexTrack]
+        
+        title = track.name
+        
+        
         dbController.delegate = self
-        if dbController.loadLyrics() == false {
-            print ("Error dbController.load")
+        if dbController.loadLyrics(trackID: track.id) == false {
+           // print ("Error dbController.load")
         }
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -50,21 +60,21 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dbController.datas.lyric.count
+        return dbController.datas.lyric.count 
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lyricCellule", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lyricCellule", for: indexPath) as! LyricsCustomCellule
         
-        // Configure the cell...
-        cell.textLabel?.text = dbController.datas.lyric[ indexPath.row ].body
-        print (dbController.datas.lyric[ indexPath.row ].body)
+//        cell.textLabel?.text = dbController.datas.lyric[ indexPath.row ].body
+        
+        cell.Lyrics_body.text = dbController.datas.lyric[ indexPath.row ].body
         return cell
     }
     

@@ -17,14 +17,14 @@ class Track {
     var albumID = 0
 }
 
-class Track_list {
-    var track = [Track]()
-    var lyric = [Lyric]()
-}
-
 class Lyric {
     var id = 0
     var body = ""
+}
+
+class Track_list {
+    var track = [Track]()
+    var lyric = [Lyric]()
 }
 
 //class Lyric_list {
