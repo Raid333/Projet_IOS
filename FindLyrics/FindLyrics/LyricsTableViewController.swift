@@ -10,15 +10,22 @@ import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
     
+    @IBOutlet var labelLyrics : UILabel!
+    
     var indexTrack = -1
     let dbController = DataBaseController.shared
     
-    func dataLoaded(datas: Track_list?) {
+    func dataLoaded(datas: Track_list?)
+    {
         guard let datas = datas else {
             print ("error data")
             return
         }
-        tableView.reloadData()
+        //tableView.reloadData()
+        
+        let trackid = dbController.datas.track[indexTrack].id
+        labelLyrics.text = dbController.datas.lyric[trackid]?.body
+        
         print ("lyrics ok")
     }
     
@@ -36,13 +43,21 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
         
         let track = dbController.datas.track[indexTrack]
         
+        
+        if let lyrics = dbController.datas.lyric[track.id]
+        {
+            let trackid = dbController.datas.track[indexTrack].id
+            labelLyrics.text = dbController.datas.lyric[trackid]?.body
+        } else {
+            dbController.delegate = self
+            if dbController.loadLyrics(trackID: track.id) == false {
+                // print ("Error dbController.load")
+            }
+        }
         title = track.name
         
         
-        dbController.delegate = self
-        if dbController.loadLyrics(trackID: track.id) == false {
-           // print ("Error dbController.load")
-        }
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,6 +73,7 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
 
     // MARK: - Table view data source
 
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -65,7 +81,7 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dbController.datas.lyric.count 
+        return 1// dbController.datas.lyric.count 
     }
 
     
@@ -74,9 +90,11 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
         
 //        cell.textLabel?.text = dbController.datas.lyric[ indexPath.row ].body
         
-        cell.Lyrics_body.text = dbController.datas.lyric[ indexPath.row ].body
+        let trackId = dbController.datas.track[indexTrack].id
+        cell.Lyrics_body.text = dbController.datas.lyric[trackId]?.body
         return cell
     }
+ */
     
 
     /*

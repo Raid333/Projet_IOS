@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lyricName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController!.navigationBar.backItem?.title = "RETOUR"
@@ -23,14 +25,21 @@ class ViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "lyricName" {
+                let TrackController = segue.destination as! TableViewController
+                TrackController.message = self.lyricName.text!
+            }
+            
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
-}

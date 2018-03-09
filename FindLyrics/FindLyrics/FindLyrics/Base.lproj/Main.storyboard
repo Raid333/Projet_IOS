@@ -74,38 +74,41 @@
         <scene sceneID="gWf-Lt-zuL">
             <objects>
                 <tableViewController id="YwC-fg-0Xv" customClass="LyricsTableViewController" customModule="FindLyrics" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mVQ-9c-Vt4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mVQ-9c-Vt4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lyricCellule" rowHeight="1000" id="wKQ-nE-Az1" customClass="LyricsCustomCellule" customModule="FindLyrics" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="1000"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wKQ-nE-Az1" id="n12-gt-5zc">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="999.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-bo-y57">
-                                            <rect key="frame" x="16" y="11" width="343" height="757"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="Lyrics_body" destination="uI7-bo-y57" id="WB8-Js-ZAe"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
+                        <sections>
+                            <tableViewSection id="FHM-r3-pzO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lyricCellule" rowHeight="1000" id="wKQ-nE-Az1" customClass="LyricsCustomCellule" customModule="FindLyrics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wKQ-nE-Az1" id="n12-gt-5zc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="999.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-bo-y57">
+                                                    <rect key="frame" x="16" y="11" width="343" height="757"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="YwC-fg-0Xv" id="Xgb-T0-5sf"/>
                             <outlet property="delegate" destination="YwC-fg-0Xv" id="s2r-Ep-6Dw"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="labelLyrics" destination="uI7-bo-y57" id="Dr4-QA-a4I"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUx-WZ-h1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,12 +122,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5k-gr-jql">
+                                <rect key="frame" x="16" y="76" width="229" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHJ-qv-heE">
-                                <rect key="frame" x="145" y="119" width="84" height="30"/>
+                                <rect key="frame" x="275" y="76" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="TRACK LIST"/>
                                 <connections>
-                                    <segue destination="5HR-xx-saH" kind="show" id="dtz-EH-oeQ"/>
+                                    <segue destination="5HR-xx-saH" kind="show" identifier="lyricName" id="dtz-EH-oeQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,10 +142,13 @@
                         <viewLayoutGuide key="safeArea" id="vKe-fw-xhP"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Ii-Z1-PJl"/>
+                    <connections>
+                        <outlet property="lyricName" destination="C5k-gr-jql" id="O0X-Lg-IF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aj0-7K-53E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-791" y="-621"/>
+            <point key="canvasLocation" x="-791.20000000000005" y="-621.13943028485767"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tel-nd-vVP">

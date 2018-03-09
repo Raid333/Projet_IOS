@@ -10,8 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController , DBDelegate{
     
+    var message = ""
     let dbController = DataBaseController.shared
-    
     func dataLoaded(datas: Track_list?) {
         guard let datas = datas else {
             print ("error data")
@@ -26,12 +26,15 @@ class TableViewController: UITableViewController , DBDelegate{
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        print (message)
         tableView.rowHeight = 100
         
-        title = "Hello2"
+        title = "Mot clé : '\(message)'"
         dbController.delegate = self
-        if dbController.loadTracks() == false {
+        dbController.datas.track.removeAll()
+        if dbController.loadTracks(paroles : message) == false {
           //  print ("Error dbController.load")
         }
         
