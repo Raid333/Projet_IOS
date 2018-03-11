@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1F5F742053ED0E000D02F0 /* TrouvesTesParoles logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */; };
 		AC6456CC204D6BED00280750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456CB204D6BED00280750 /* AppDelegate.swift */; };
 		AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D2204D6BED00280750 /* Assets.xcassets */; };
 		AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TrouvesTesParoles logo.png"; path = "../../../Documents/TrouvesTesParoles logo.png"; sourceTree = "<group>"; };
 		AC6456C8204D6BED00280750 /* FindLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6456CB204D6BED00280750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6456D2204D6BED00280750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				ACE261AE205180F9006FC9C8 /* Main.storyboard */,
 				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
 				AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */,
+				AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */,
 				AC6456D2204D6BED00280750 /* Assets.xcassets */,
 				AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */,
 				AC6456D7204D6BED00280750 /* Info.plist */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1F5F742053ED0E000D02F0 /* TrouvesTesParoles logo.png in Resources */,
 				ACE261B0205180F9006FC9C8 /* Main.storyboard in Resources */,
 				AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */,
 				AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */,

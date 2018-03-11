@@ -9,6 +9,13 @@
 import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
+    var message = ""
+    public func searchKeyWord (body : String, word : String) -> String {
+        
+        let str = "\(body)"
+        let replaced = str.replacingOccurrences(of: "\(word)", with: "\(word.uppercased())")
+        return replaced
+    }
     
     @IBOutlet var labelLyrics : UILabel!
     
@@ -19,15 +26,24 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
     {
         guard let datas = datas else {
             print ("error data")
+            
+            let alertController = UIAlertController(title: "Erreur", message:
+                "Problème de connexion", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Fermer", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            
             return
         }
         //tableView.reloadData()
         
         let trackid = dbController.datas.track[indexTrack].id
-        labelLyrics.text = dbController.datas.lyric[trackid]?.body
+//        labelLyrics.text = dbController.datas.lyric[trackid]?.body
+        labelLyrics.text = searchKeyWord(body: "\(dbController.datas.lyric[trackid]!.body)", word: "\(message)")
+        
         
         print ("lyrics ok")
-    }
+        
+        }
     
     
     
@@ -36,25 +52,26 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 1000
-        
         print (indexTrack)
         assert(indexTrack >= 0)
-        
         
         let track = dbController.datas.track[indexTrack]
         
         
+        
         if let lyrics = dbController.datas.lyric[track.id]
         {
+            
             let trackid = dbController.datas.track[indexTrack].id
-            labelLyrics.text = dbController.datas.lyric[trackid]?.body
+            labelLyrics.text = searchKeyWord(body: "\(dbController.datas.lyric[trackid]!.body)", word: "\(message)")
+            
         } else {
             dbController.delegate = self
             if dbController.loadLyrics(trackID: track.id) == false {
                 // print ("Error dbController.load")
             }
         }
-        title = track.name
+        navigationItem.title = track.name
         
         
         

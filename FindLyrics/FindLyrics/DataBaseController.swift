@@ -84,7 +84,7 @@ class DataBaseController: NSObject
         
         
         let apiKey = "3268eb1f943b699a9085beaede770116"
-        var url = "http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=\(paroles)&page_size=20&page=1&s_track_rating=desc&apikey=\(apiKey)"
+        var url = "http://api.musixmatch.com/ws/1.1/track.search?q=\(paroles)&page_size=20&page=1&s_track_rating=desc&apikey=\(apiKey)"
         
         if( musicMatchRequest(url : url , callback: { (body) in
             

@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController!.navigationBar.backItem?.title = "RETOUR"
-        title = "Hello"
+        title = "Trouves Tes Paroles"
+        
         // Do any additional setup after loading the view.
     }
 
