@@ -10,15 +10,23 @@ import UIKit
 
 class TableViewController: UITableViewController , DBDelegate{
     
+    var message = ""
     let dbController = DataBaseController.shared
-    
     func dataLoaded(datas: Track_list?) {
         guard let datas = datas else {
             print ("error data")
+            
+            let alertController = UIAlertController(title: "Erreur", message:
+                "Problème de connexion", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Fermer", style: UIAlertActionStyle.default,handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            
             return
         }
         tableView.reloadData()
         print ("tracks ok")
+        navigationItem.prompt = "\(dbController.datas.track.count) résultat(s)"
+        navigationItem.title = "Mot clé : \"\(message)\""
     }
     
     
@@ -26,12 +34,18 @@ class TableViewController: UITableViewController , DBDelegate{
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.rowHeight = 100
         
-        title = "Hello2"
+        super.viewDidLoad()
+        
+        
+        print (message)
+        tableView.rowHeight = 100
         dbController.delegate = self
-        if dbController.loadTracks() == false {
+        
+        
+        if (dbController.datas.track.count != 0) {dbController.datas.track.removeAll() }
+        
+        if dbController.loadTracks(paroles : message) == false {
           //  print ("Error dbController.load")
         }
         
@@ -117,6 +131,7 @@ class TableViewController: UITableViewController , DBDelegate{
                 
                 let viewController = segue.destination as! LyricsTableViewController
                 viewController.indexTrack =  indexPath.row
+                viewController.message = self.message
             }
             
         }

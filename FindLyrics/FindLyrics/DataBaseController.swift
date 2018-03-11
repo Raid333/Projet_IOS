@@ -79,13 +79,12 @@ class DataBaseController: NSObject
         return false
     }
     
-    public func loadTracks() ->Bool
+    public func loadTracks(paroles : String) -> Bool
     {
         
         
         let apiKey = "3268eb1f943b699a9085beaede770116"
-        var parole = "bitch"
-        var url = "http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=\(parole)&page_size=20&page=1&s_track_rating=desc&apikey=\(apiKey)"
+        var url = "http://api.musixmatch.com/ws/1.1/track.search?q=\(paroles)&page_size=20&page=1&s_track_rating=desc&apikey=\(apiKey)"
         
         if( musicMatchRequest(url : url , callback: { (body) in
             
@@ -123,6 +122,7 @@ class DataBaseController: NSObject
             DispatchQueue.main.async {
                 self.delegate!.dataLoaded(datas : self.datas)
             }
+            
         }))
         {
             
@@ -209,26 +209,28 @@ class DataBaseController: NSObject
         let apiKey = "3268eb1f943b699a9085beaede770116"
 //        var trackID = ""
         var url = "http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=\(trackID)&apikey=\(apiKey)"
-        print (url)
+//        print (url)
+        
         if (musicMatchRequest( url : url , callback: { (body) in
             guard let body = body else {
                 return
             }
             if let lyrics = body["lyrics"] as? [String : Any] {
                 var listeLyric = Lyric()
-                
                 if let lyrics_body = lyrics["lyrics_body"] as? String {
                     // ajouter aux paroles
                     listeLyric.body = lyrics_body
 //                    print (lyrics_body)
 //                    print (listeLyric.body)
+                        self.datas.lyric[trackID] = listeLyric
                 }
-                self.datas.lyric.append(listeLyric)
+                
             }//end body
             
             DispatchQueue.main.async {
                 self.delegate!.dataLoaded(datas : self.datas)
             }
+            
 //            self.datas.lyric.append(listeLyric)
             //append sur la table lyrics
             
