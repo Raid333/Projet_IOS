@@ -111,6 +111,9 @@ class DataBaseController: NSObject
                         if let album = musique["album_name"] as? String {
                             listeMusique.album = album
                         }
+                        if let explicite = musique["explicit"] as? Int {
+                            listeMusique.explicite = explicite
+                        }
                         
                     }// end for musique
                     

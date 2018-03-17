@@ -11,11 +11,34 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var lyricName: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        if textField.text?.characters.count == 1 {
+            if textField.text?.characters.first == " " {
+                textField.text = ""
+                return
+            }
+        }
+        guard
+            let lyric = lyricName.text, !lyric.isEmpty
+            else {
+                self.searchButton.isEnabled = false
+                return
+        }
+        self.searchButton.isEnabled = true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController!.navigationBar.backItem?.title = "RETOUR"
         title = "Trouves Tes Paroles"
+        lyricName.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
+        
+        
+        searchButton.isEnabled = false
+       
         
         // Do any additional setup after loading the view.
     }
@@ -25,7 +48,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     // MARK: - Navigation
 
@@ -38,7 +61,8 @@ class ViewController: UIViewController {
             }
             
         }
-        
+    
+    
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

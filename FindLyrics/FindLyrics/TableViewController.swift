@@ -79,6 +79,9 @@ class TableViewController: UITableViewController , DBDelegate{
         cell.title.text = dbController.datas.track[ indexPath.row ].name
         cell.artist.text = dbController.datas.track[ indexPath.row ].artist
         cell.album.text = dbController.datas.track[ indexPath.row ].album
+        if (dbController.datas.track[ indexPath.row ].explicite == 1) {
+            cell.explicite.image = UIImage (named : "explicite.png")
+        }
         // Configure the cell...
         
         return cell

@@ -10,14 +10,35 @@ import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
     var message = ""
-    public func searchKeyWord (body : String, word : String) -> String {
-        
-        let str = "\(body)"
-        let replaced = str.replacingOccurrences(of: "\(word)", with: "\(word.uppercased())")
-        return replaced
-    }
     
-    @IBOutlet var labelLyrics : UILabel!
+//    public func searchKeyWord (body : String, word : String) -> String {
+//
+//        let str = "\(body)"
+//        let replaced = str.replacingOccurrences(of: "\(word)", with: "\(word.uppercased())")
+//        return replaced
+//
+////        let strNumber: NSString = body as NSString
+////        let range = (body).range(of: word)
+////        let attribute = NSMutableAttributedString.init(string: body)
+////        attribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.red , range: range)
+////        labelLyrics.text = attribute
+//    }
+    
+    func searchKeyWord(with body: String, word: String) -> NSMutableAttributedString {
+        let attributed = NSMutableAttributedString(string: body)
+        do
+        {
+            let regex = try! NSRegularExpression(pattern: word,options: .caseInsensitive)
+            for match in regex.matches(in: body, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: body.characters.count)) as [NSTextCheckingResult] {
+                attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+            }
+            return attributed
+        }
+    }
+
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var albumName: UILabel!
+    @IBOutlet weak var viewLyrics: UITextView!
     
     var indexTrack = -1
     let dbController = DataBaseController.shared
@@ -38,7 +59,14 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
         
         let trackid = dbController.datas.track[indexTrack].id
 //        labelLyrics.text = dbController.datas.lyric[trackid]?.body
-        labelLyrics.text = searchKeyWord(body: "\(dbController.datas.lyric[trackid]!.body)", word: "\(message)")
+        let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)
+        let regex = try! NSRegularExpression(pattern: message,options: .caseInsensitive)
+        for match in regex.matches(in: (dbController.datas.lyric[trackid]?.body)!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (dbController.datas.lyric[trackid]?.body.characters.count)!)) as [NSTextCheckingResult] {
+            attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+        }
+        self.viewLyrics.attributedText = attributed
+        viewLyrics.font = .systemFont(ofSize: 17)
+//        viewLyrics.text = searchKeyWord(with: "\(dbController.datas.lyric[trackid]?.body)", word: "\(message)")
         
         
         print ("lyrics ok")
@@ -63,7 +91,14 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
         {
             
             let trackid = dbController.datas.track[indexTrack].id
-            labelLyrics.text = searchKeyWord(body: "\(dbController.datas.lyric[trackid]!.body)", word: "\(message)")
+//            viewLyrics.text = searchKeyWord(with: "\(dbController.datas.lyric[trackid]?.body)", word: "\(message)")
+            let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)
+            let regex = try! NSRegularExpression(pattern: message,options: .caseInsensitive)
+            for match in regex.matches(in: (dbController.datas.lyric[trackid]?.body)!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (dbController.datas.lyric[trackid]?.body.characters.count)!)) as [NSTextCheckingResult] {
+                attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+            }
+            self.viewLyrics.attributedText = attributed
+            viewLyrics.font = .systemFont(ofSize: 17)
             
         } else {
             dbController.delegate = self
@@ -72,7 +107,8 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             }
         }
         navigationItem.title = track.name
-        
+        artistName.text = track.artist
+        albumName.text = track.album
         
         
         

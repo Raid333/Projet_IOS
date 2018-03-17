@@ -15,6 +15,7 @@ class Track {
     var artistID = 0
     var album = ""
     var albumID = 0
+    var explicite = 0
 }
 
 class Lyric {

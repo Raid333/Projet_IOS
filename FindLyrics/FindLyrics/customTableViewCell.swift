@@ -11,6 +11,7 @@ import UIKit
 class customTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var explicite: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var artist: UILabel!
     @IBOutlet weak var album: UILabel!

@@ -13,6 +13,7 @@
 		AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */; };
 		AC6456E1204D6BED00280750 /* FindLyricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456E0204D6BED00280750 /* FindLyricsTests.swift */; };
 		AC6456EC204D6BED00280750 /* FindLyricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */; };
+		AC6BB277205553E8001C5BFA /* explicite.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6BB276205553E8001C5BFA /* explicite.png */; };
 		AC6C7460204E981300091A74 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C745F204E981300091A74 /* TableViewController.swift */; };
 		AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */; };
 		AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */; };
@@ -53,6 +54,7 @@
 		AC6456E7204D6BED00280750 /* FindLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLyricsUITests.swift; sourceTree = "<group>"; };
 		AC6456ED204D6BED00280750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6BB276205553E8001C5BFA /* explicite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explicite.png; path = ../../../Downloads/explicite.png; sourceTree = "<group>"; };
 		AC6C745F204E981300091A74 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
 		AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				ACE261AE205180F9006FC9C8 /* Main.storyboard */,
 				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
 				AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */,
+				AC6BB276205553E8001C5BFA /* explicite.png */,
 				AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */,
 				AC6456D2204D6BED00280750 /* Assets.xcassets */,
 				AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */,
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC6BB277205553E8001C5BFA /* explicite.png in Resources */,
 				AC1F5F742053ED0E000D02F0 /* TrouvesTesParoles logo.png in Resources */,
 				ACE261B0205180F9006FC9C8 /* Main.storyboard in Resources */,
 				AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */,
