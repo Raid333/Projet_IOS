@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,11 +49,23 @@
                                             <nil key="highlightedColor"/>
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I0O-Xh-LR3">
+                                            <rect key="frame" x="298" y="53" width="61" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="61" id="JLy-DT-bn7"/>
+                                                <constraint firstAttribute="height" constant="36" id="gHy-vM-obK"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I0O-Xh-LR3" firstAttribute="trailing" secondItem="qBh-Ki-7Fv" secondAttribute="trailingMargin" id="Hyg-iz-7T3"/>
+                                        <constraint firstItem="I0O-Xh-LR3" firstAttribute="bottom" secondItem="qBh-Ki-7Fv" secondAttribute="bottomMargin" id="gic-Hn-S0h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="album" destination="X59-94-vgI" id="TvJ-6q-WMh"/>
                                     <outlet property="artist" destination="0Ex-pE-9sJ" id="suY-ev-FwF"/>
+                                    <outlet property="explicite" destination="I0O-Xh-LR3" id="F4D-kM-2wY"/>
                                     <outlet property="title" destination="dzW-lF-hmQ" id="AXh-Pg-g5K"/>
                                     <segue destination="YwC-fg-0Xv" kind="show" identifier="trackID" id="ms9-P0-njK"/>
                                 </connections>
@@ -78,22 +91,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection id="FHM-r3-pzO">
+                            <tableViewSection headerTitle="Infos" id="FHM-r3-pzO">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lyricCellule" rowHeight="1000" id="wKQ-nE-Az1" customClass="LyricsCustomCellule" customModule="FindLyrics" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="Kel-ym-GcB" customClass="LyricsCustomCellule" customModule="FindLyrics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wKQ-nE-Az1" id="n12-gt-5zc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="999.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kel-ym-GcB" id="Swz-gb-FbY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pas de paroles disponible" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-bo-y57">
-                                                    <rect key="frame" x="16" y="11" width="343" height="757"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjr-LT-eiI">
+                                                    <rect key="frame" x="16" y="14" width="176" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Z-4n-5xm">
+                                                    <rect key="frame" x="195" y="14" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Paroles" id="uWw-OT-hlt">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lyricCellule" rowHeight="1000" id="zjJ-7H-62A" customClass="LyricsCustomCellule" customModule="FindLyrics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="106" width="375" height="1000"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zjJ-7H-62A" id="eLm-AO-WEX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="999.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hst-hy-cGg">
+                                                    <rect key="frame" x="0.0" y="10" width="375" height="593"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -106,7 +147,9 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="labelLyrics" destination="uI7-bo-y57" id="Dr4-QA-a4I"/>
+                        <outlet property="albumName" destination="s1Z-4n-5xm" id="Ba9-a2-cIg"/>
+                        <outlet property="artistName" destination="Zjr-LT-eiI" id="RQH-xM-AFh"/>
+                        <outlet property="viewLyrics" destination="hst-hy-cGg" id="Oqm-Lk-7mw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUx-WZ-h1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,17 +179,21 @@
                                     <segue destination="5HR-xx-saH" kind="show" identifier="lyricName" id="dtz-EH-oeQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TrouvesTesParoles logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BO7-50-f85">
-                                <rect key="frame" x="67" y="223" width="240" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrouvesTesParoles logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BO7-50-f85">
+                                <rect key="frame" x="59" y="205.5" width="256" height="256"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BO7-50-f85" firstAttribute="centerY" secondItem="dEE-tE-BhK" secondAttribute="centerY" id="Rh0-Ux-ZjZ"/>
+                            <constraint firstItem="BO7-50-f85" firstAttribute="centerX" secondItem="dEE-tE-BhK" secondAttribute="centerX" id="mjD-mg-tJd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vKe-fw-xhP"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Ii-Z1-PJl"/>
                     <connections>
                         <outlet property="lyricName" destination="C5k-gr-jql" id="O0X-Lg-IF0"/>
+                        <outlet property="searchButton" destination="rHJ-qv-heE" id="SYM-5C-dc1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aj0-7K-53E" userLabel="First Responder" sceneMemberID="firstResponder"/>
