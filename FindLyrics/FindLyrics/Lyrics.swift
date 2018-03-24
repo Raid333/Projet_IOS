@@ -16,6 +16,7 @@ class Track {
     var album = ""
     var albumID = 0
     var explicite = 0
+    var test = 0
 }
 
 class Lyric {
@@ -26,6 +27,8 @@ class Lyric {
 class Track_list {
     var track = [Track]()
     var lyric = [ Int : Lyric]()
+    
+    
 }
 
 //class Lyric_list {

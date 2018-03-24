@@ -81,10 +81,15 @@ class DataBaseController: NSObject
     
     public func loadTracks(paroles : String) -> Bool
     {
+        var i = 0
+        //Comptage mots
+        let components = paroles.components(separatedBy: .whitespacesAndNewlines)
+        let wordCount = components.filter{ !$0.isEmpty }.count
+        let words = components.filter{ !$0.isEmpty }
         
-        
+        for word in words {
         let apiKey = "3268eb1f943b699a9085beaede770116"
-        var url = "http://api.musixmatch.com/ws/1.1/track.search?q=\(paroles)&page_size=20&page=1&s_track_rating=desc&apikey=\(apiKey)"
+        var url = "http://api.musixmatch.com/ws/1.1/track.search?q_lyrics=\(word)&page_size=100&page=1&s_track_rating=desc&apikey=\(apiKey)"
         
         if( musicMatchRequest(url : url , callback: { (body) in
             
@@ -92,6 +97,8 @@ class DataBaseController: NSObject
             {
                 return
             }
+            i += 1
+            print (i)
             if let tracks = body["track_list"] as? [ [ String : Any ] ] {
                 for track in tracks {
                     var listeMusique = Track()
@@ -118,6 +125,7 @@ class DataBaseController: NSObject
                     }// end for musique
                     
                     // voir pour l'ajout de musique dans le tableau (bdd)
+                    
                     self.datas.track.append(listeMusique)
                 }
                 
@@ -201,8 +209,9 @@ class DataBaseController: NSObject
             }).resume()
         }
  */
-        
+        }
         return false
+        
     }
     
     public func loadLyrics(trackID : Int) ->Bool

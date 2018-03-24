@@ -37,8 +37,16 @@ class TableViewController: UITableViewController , DBDelegate{
         
         super.viewDidLoad()
         
-        
+        //Comptage des mots recherchés
+        let components = message.components(separatedBy: .whitespacesAndNewlines)
+        let wordCount = components.filter{ !$0.isEmpty }.count
+        let words = components.filter{ !$0.isEmpty }
+//        print (spaceCount)
         print (message)
+//        for mot in spaceCount {
+//                print (mot)
+//        }
+        
         tableView.rowHeight = 100
         dbController.delegate = self
         
