@@ -26,8 +26,10 @@ class Lyric {
 
 class Track_list {
     var track = [Track]()
-    var lyric = [ Int : Lyric]()
+    var artistTrack = [Track]()
+    var albumTrack = [Track]()
     
+    var lyric = [ Int : Lyric]()
     
 }
 

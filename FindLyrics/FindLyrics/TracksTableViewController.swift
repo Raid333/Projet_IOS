@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController , DBDelegate{
+class TracksTableViewController: UITableViewController , DBDelegate{
     
     var message = ""
     let dbController = DataBaseController.shared
@@ -143,6 +143,7 @@ class TableViewController: UITableViewController , DBDelegate{
                 let viewController = segue.destination as! LyricsTableViewController
                 viewController.indexTrack =  indexPath.row
                 viewController.message = self.message
+                
             }
             
         }

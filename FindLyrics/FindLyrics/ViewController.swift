@@ -56,7 +56,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "lyricName" {
-                let TrackController = segue.destination as! TableViewController
+                let TrackController = segue.destination as! TracksTableViewController
                 TrackController.message = self.lyricName.text!
             }
             
