@@ -10,7 +10,6 @@ import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
     var message = ""
-    
 //    public func searchKeyWord (body : String, word : String) -> String {
 //
 //        let str = "\(body)"
@@ -36,9 +35,10 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
         }
     }
 
-    @IBOutlet weak var artistName: UILabel!
-    @IBOutlet weak var albumName: UILabel!
     @IBOutlet weak var viewLyrics: UITextView!
+    @IBOutlet weak var nomArtiste: UIButton!
+    @IBOutlet weak var nomAlbum: UIButton!
+    
     
     var indexTrack = -1
     let dbController = DataBaseController.shared
@@ -107,10 +107,10 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             }
         }
         navigationItem.title = track.name
-        artistName.text = track.artist
-        albumName.text = track.album
-        
-        
+        nomArtiste.setTitle(track.artist, for: .normal)
+        nomArtiste.setTitleColor(UIColor.purple, for: .normal)
+        nomAlbum.setTitleColor(UIColor.purple, for: .normal)
+        nomAlbum.setTitle(track.album, for: .normal)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -185,14 +185,20 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "artiste" {
+        let viewController = segue.destination as! ArtistTableViewController
+        viewController.artistID = self.dbController.datas.track[indexTrack].artistID
+        viewController.artistNAME = self.dbController.datas.track[indexTrack].artist
+        } else if segue.identifier == "album" {
+            let viewController = segue.destination as! AlbumTableViewController
+            viewController.albumID = self.dbController.datas.track[indexTrack].albumID
+            viewController.albumNAME = self.dbController.datas.track[indexTrack].album
+        }
     }
-    */
 
 }

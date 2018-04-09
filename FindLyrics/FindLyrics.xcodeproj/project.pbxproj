@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC1F5F742053ED0E000D02F0 /* TrouvesTesParoles logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */; };
+		AC2080942073DA29005D01CC /* Lyrics2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2080932073DA29005D01CC /* Lyrics2TableViewController.swift */; };
 		AC6456CC204D6BED00280750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456CB204D6BED00280750 /* AppDelegate.swift */; };
 		AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D2204D6BED00280750 /* Assets.xcassets */; };
 		AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */; };
 		AC6456E1204D6BED00280750 /* FindLyricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456E0204D6BED00280750 /* FindLyricsTests.swift */; };
 		AC6456EC204D6BED00280750 /* FindLyricsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */; };
-		AC6BB277205553E8001C5BFA /* explicite.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6BB276205553E8001C5BFA /* explicite.png */; };
-		AC6C7460204E981300091A74 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C745F204E981300091A74 /* TableViewController.swift */; };
+		AC6C7460204E981300091A74 /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6C745F204E981300091A74 /* TracksTableViewController.swift */; };
 		AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */; };
 		AC8B8A89204D6DC2007DB5AA /* Lyrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */; };
 		AC934EAD20528BE500111DEC /* LyricsCustomCellule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */; };
 		AC9D31E8204FF79D0017AAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E7204FF79D0017AAB8 /* ViewController.swift */; };
 		AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */; };
+		ACA7B126207374F70026E768 /* TrouvesTesParoles logo.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA7B125207374F70026E768 /* TrouvesTesParoles logo.png */; };
+		ACA7B128207374FF0026E768 /* explicite.png in Resources */ = {isa = PBXBuildFile; fileRef = ACA7B127207374FF0026E768 /* explicite.png */; };
+		ACA7B12C207380500026E768 /* ArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA7B12B207380500026E768 /* ArtistTableViewController.swift */; };
+		ACA7B12E207380800026E768 /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA7B12D207380800026E768 /* AlbumTableViewController.swift */; };
 		ACE261AD205162CD006FC9C8 /* LyricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */; };
 		ACE261B0205180F9006FC9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE261AE205180F9006FC9C8 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -42,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TrouvesTesParoles logo.png"; path = "../../../Documents/TrouvesTesParoles logo.png"; sourceTree = "<group>"; };
+		AC2080932073DA29005D01CC /* Lyrics2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics2TableViewController.swift; sourceTree = "<group>"; };
 		AC6456C8204D6BED00280750 /* FindLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6456CB204D6BED00280750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6456D2204D6BED00280750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,13 +57,16 @@
 		AC6456E7204D6BED00280750 /* FindLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6456EB204D6BED00280750 /* FindLyricsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLyricsUITests.swift; sourceTree = "<group>"; };
 		AC6456ED204D6BED00280750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC6BB276205553E8001C5BFA /* explicite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explicite.png; path = ../../../Downloads/explicite.png; sourceTree = "<group>"; };
-		AC6C745F204E981300091A74 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		AC6C745F204E981300091A74 /* TracksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
 		AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseController.swift; sourceTree = "<group>"; };
 		AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyrics.swift; sourceTree = "<group>"; };
 		AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsCustomCellule.swift; sourceTree = "<group>"; };
 		AC9D31E7204FF79D0017AAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTableViewCell.swift; sourceTree = "<group>"; };
+		ACA7B125207374F70026E768 /* TrouvesTesParoles logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TrouvesTesParoles logo.png"; sourceTree = "<group>"; };
+		ACA7B127207374FF0026E768 /* explicite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explicite.png; sourceTree = "<group>"; };
+		ACA7B12B207380500026E768 /* ArtistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistTableViewController.swift; sourceTree = "<group>"; };
+		ACA7B12D207380800026E768 /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
 		ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsTableViewController.swift; sourceTree = "<group>"; };
 		ACE261AF205180F9006FC9C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FindLyrics/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,14 +122,17 @@
 				AC8B8A88204D6DC2007DB5AA /* Lyrics.swift */,
 				AC6456CB204D6BED00280750 /* AppDelegate.swift */,
 				AC9D31E7204FF79D0017AAB8 /* ViewController.swift */,
-				AC6C745F204E981300091A74 /* TableViewController.swift */,
+				ACA7B12B207380500026E768 /* ArtistTableViewController.swift */,
+				ACA7B12D207380800026E768 /* AlbumTableViewController.swift */,
+				AC6C745F204E981300091A74 /* TracksTableViewController.swift */,
 				ACE261AC205162CD006FC9C8 /* LyricsTableViewController.swift */,
 				AC8B8A86204D6D44007DB5AA /* DataBaseController.swift */,
 				ACE261AE205180F9006FC9C8 /* Main.storyboard */,
+				AC2080932073DA29005D01CC /* Lyrics2TableViewController.swift */,
 				AC9D31E920501F1B0017AAB8 /* customTableViewCell.swift */,
 				AC934EAC20528BE500111DEC /* LyricsCustomCellule.swift */,
-				AC6BB276205553E8001C5BFA /* explicite.png */,
-				AC1F5F732053ED0D000D02F0 /* TrouvesTesParoles logo.png */,
+				ACA7B125207374F70026E768 /* TrouvesTesParoles logo.png */,
+				ACA7B127207374FF0026E768 /* explicite.png */,
 				AC6456D2204D6BED00280750 /* Assets.xcassets */,
 				AC6456D4204D6BED00280750 /* LaunchScreen.storyboard */,
 				AC6456D7204D6BED00280750 /* Info.plist */,
@@ -256,8 +265,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC6BB277205553E8001C5BFA /* explicite.png in Resources */,
-				AC1F5F742053ED0E000D02F0 /* TrouvesTesParoles logo.png in Resources */,
+				ACA7B128207374FF0026E768 /* explicite.png in Resources */,
+				ACA7B126207374F70026E768 /* TrouvesTesParoles logo.png in Resources */,
 				ACE261B0205180F9006FC9C8 /* Main.storyboard in Resources */,
 				AC6456D6204D6BED00280750 /* LaunchScreen.storyboard in Resources */,
 				AC6456D3204D6BED00280750 /* Assets.xcassets in Resources */,
@@ -291,8 +300,11 @@
 				AC934EAD20528BE500111DEC /* LyricsCustomCellule.swift in Sources */,
 				AC9D31EA20501F1B0017AAB8 /* customTableViewCell.swift in Sources */,
 				AC8B8A87204D6D44007DB5AA /* DataBaseController.swift in Sources */,
-				AC6C7460204E981300091A74 /* TableViewController.swift in Sources */,
+				AC6C7460204E981300091A74 /* TracksTableViewController.swift in Sources */,
+				ACA7B12E207380800026E768 /* AlbumTableViewController.swift in Sources */,
 				AC6456CC204D6BED00280750 /* AppDelegate.swift in Sources */,
+				ACA7B12C207380500026E768 /* ArtistTableViewController.swift in Sources */,
+				AC2080942073DA29005D01CC /* Lyrics2TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

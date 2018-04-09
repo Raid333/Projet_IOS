@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController , DBDelegate{
+class TracksTableViewController: UITableViewController , DBDelegate{
     
     var message = ""
     let dbController = DataBaseController.shared
@@ -37,8 +37,16 @@ class TableViewController: UITableViewController , DBDelegate{
         
         super.viewDidLoad()
         
-        
+        //Comptage des mots recherchés
+        let components = message.components(separatedBy: .whitespacesAndNewlines)
+        let wordCount = components.filter{ !$0.isEmpty }.count
+        let words = components.filter{ !$0.isEmpty }
+//        print (spaceCount)
         print (message)
+//        for mot in spaceCount {
+//                print (mot)
+//        }
+        
         tableView.rowHeight = 100
         dbController.delegate = self
         
@@ -135,6 +143,7 @@ class TableViewController: UITableViewController , DBDelegate{
                 let viewController = segue.destination as! LyricsTableViewController
                 viewController.indexTrack =  indexPath.row
                 viewController.message = self.message
+                
             }
             
         }
