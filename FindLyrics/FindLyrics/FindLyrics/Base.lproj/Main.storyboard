@@ -285,7 +285,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99O-9G-ycJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2290" y="-1095"/>
+            <point key="canvasLocation" x="2288.8000000000002" y="-1095.2023988005999"/>
         </scene>
         <!--Lyrics2 Table View Controller-->
         <scene sceneID="LXc-bh-bSn">

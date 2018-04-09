@@ -56,13 +56,14 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             return
         }
         //tableView.reloadData()
-        
+        let newString = message.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        print (newString)
         let trackid = dbController.datas.track[indexTrack].id
 //        labelLyrics.text = dbController.datas.lyric[trackid]?.body
         let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)
         let regex = try! NSRegularExpression(pattern: message,options: .caseInsensitive)
         for match in regex.matches(in: (dbController.datas.lyric[trackid]?.body)!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (dbController.datas.lyric[trackid]?.body.characters.count)!)) as [NSTextCheckingResult] {
-            attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+            attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.magenta, range: match.range)
         }
         self.viewLyrics.attributedText = attributed
         viewLyrics.font = .systemFont(ofSize: 17)
@@ -95,7 +96,7 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)
             let regex = try! NSRegularExpression(pattern: message,options: .caseInsensitive)
             for match in regex.matches(in: (dbController.datas.lyric[trackid]?.body)!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (dbController.datas.lyric[trackid]?.body.characters.count)!)) as [NSTextCheckingResult] {
-                attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+                attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.magenta, range: match.range)
             }
             self.viewLyrics.attributedText = attributed
             viewLyrics.font = .systemFont(ofSize: 17)

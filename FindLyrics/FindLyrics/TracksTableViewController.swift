@@ -49,11 +49,12 @@ class TracksTableViewController: UITableViewController , DBDelegate{
         
         tableView.rowHeight = 100
         dbController.delegate = self
-        
+        let newString = message.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        print (newString)
         
         if (dbController.datas.track.count != 0) {dbController.datas.track.removeAll() }
         
-        if dbController.loadTracks(paroles : message) == false {
+        if dbController.loadTracks(paroles : newString) == false {
           //  print ("Error dbController.load")
         }
         

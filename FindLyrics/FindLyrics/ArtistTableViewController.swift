@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ArtistTableViewController: UITableViewController, DBDelegate {
+class ArtistTableViewController: UITableViewController, DBDelegate{
         var artistID = 0
         var artistNAME = ""
         let dbController = DataBaseController.shared
+    
+    
+    
     func dataLoaded(datas: Track_list?) {
         guard let datas = datas else {
             print ("error data")
@@ -33,9 +36,11 @@ class ArtistTableViewController: UITableViewController, DBDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         print (artistID)
         tableView.rowHeight = 100
         dbController.delegate = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         if (dbController.datas.artistTrack.count != 0) {dbController.datas.artistTrack.removeAll() }
