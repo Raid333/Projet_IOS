@@ -10,18 +10,6 @@ import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
     var message = ""
-//    public func searchKeyWord (body : String, word : String) -> String {
-//
-//        let str = "\(body)"
-//        let replaced = str.replacingOccurrences(of: "\(word)", with: "\(word.uppercased())")
-//        return replaced
-//
-////        let strNumber: NSString = body as NSString
-////        let range = (body).range(of: word)
-////        let attribute = NSMutableAttributedString.init(string: body)
-////        attribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.red , range: range)
-////        labelLyrics.text = attribute
-//    }
     
     func searchKeyWord(with body: String, word: String) -> NSMutableAttributedString {
         let attributed = NSMutableAttributedString(string: body)
@@ -56,8 +44,6 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             return
         }
         //tableView.reloadData()
-        let newString = message.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
-        print (newString)
         let trackid = dbController.datas.track[indexTrack].id
 //        labelLyrics.text = dbController.datas.lyric[trackid]?.body
         let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)

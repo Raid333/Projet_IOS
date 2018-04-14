@@ -35,10 +35,9 @@ class ViewController: UIViewController {
         navigationController!.navigationBar.backItem?.title = "RETOUR"
         title = "Trouves Tes Paroles"
         lyricName.addTarget(self, action: #selector(editingChanged), for: .editingChanged)
-        
-        
         searchButton.isEnabled = false
        
+        
         
         // Do any additional setup after loading the view.
     }

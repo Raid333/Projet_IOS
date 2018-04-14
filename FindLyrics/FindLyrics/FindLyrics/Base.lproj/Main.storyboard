@@ -76,7 +76,9 @@
                             <outlet property="delegate" destination="5HR-xx-saH" id="W75-JP-zef"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PUb-AL-I0c"/>
+                    <navigationItem key="navigationItem" id="PUb-AL-I0c">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="v2r-ER-zlQ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlm-X3-7La" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
