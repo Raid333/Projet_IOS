@@ -76,7 +76,9 @@
                             <outlet property="delegate" destination="5HR-xx-saH" id="W75-JP-zef"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="PUb-AL-I0c"/>
+                    <navigationItem key="navigationItem" id="PUb-AL-I0c">
+                        <barButtonItem key="backBarButtonItem" title="Retour" id="v2r-ER-zlQ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qlm-X3-7La" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,7 +287,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99O-9G-ycJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2290" y="-1095"/>
+            <point key="canvasLocation" x="2288.8000000000002" y="-1095.2023988005999"/>
         </scene>
         <!--Lyrics2 Table View Controller-->
         <scene sceneID="LXc-bh-bSn">

@@ -10,18 +10,6 @@ import UIKit
 
 class LyricsTableViewController: UITableViewController, DBDelegate {
     var message = ""
-//    public func searchKeyWord (body : String, word : String) -> String {
-//
-//        let str = "\(body)"
-//        let replaced = str.replacingOccurrences(of: "\(word)", with: "\(word.uppercased())")
-//        return replaced
-//
-////        let strNumber: NSString = body as NSString
-////        let range = (body).range(of: word)
-////        let attribute = NSMutableAttributedString.init(string: body)
-////        attribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.red , range: range)
-////        labelLyrics.text = attribute
-//    }
     
     func searchKeyWord(with body: String, word: String) -> NSMutableAttributedString {
         let attributed = NSMutableAttributedString(string: body)
@@ -56,13 +44,12 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             return
         }
         //tableView.reloadData()
-        
         let trackid = dbController.datas.track[indexTrack].id
 //        labelLyrics.text = dbController.datas.lyric[trackid]?.body
         let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)
         let regex = try! NSRegularExpression(pattern: message,options: .caseInsensitive)
         for match in regex.matches(in: (dbController.datas.lyric[trackid]?.body)!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (dbController.datas.lyric[trackid]?.body.characters.count)!)) as [NSTextCheckingResult] {
-            attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+            attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.magenta, range: match.range)
         }
         self.viewLyrics.attributedText = attributed
         viewLyrics.font = .systemFont(ofSize: 17)
@@ -95,7 +82,7 @@ class LyricsTableViewController: UITableViewController, DBDelegate {
             let attributed = NSMutableAttributedString(string: (dbController.datas.lyric[trackid]?.body)!)
             let regex = try! NSRegularExpression(pattern: message,options: .caseInsensitive)
             for match in regex.matches(in: (dbController.datas.lyric[trackid]?.body)!, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: (dbController.datas.lyric[trackid]?.body.characters.count)!)) as [NSTextCheckingResult] {
-                attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.yellow, range: match.range)
+                attributed.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.magenta, range: match.range)
             }
             self.viewLyrics.attributedText = attributed
             viewLyrics.font = .systemFont(ofSize: 17)
